@@ -51,6 +51,54 @@ AI image models don't just "learn from old paintings." The yellow/orange cast co
 
 ---
 
+## 🖼 Before → After Examples — See It In Action
+
+> **Real results from the skill** — no cherry-picking, just the prompt applied to yellow-tinted images.
+
+---
+
+### 1️⃣ 🛒 Supermarket Promo Poster
+
+**Problem**: Yellow/orange cast — cream whites, amber shadows, inaccurate brand blues
+
+| Before (Yellow Tint) | After (Neutral) |
+|:---:|:---:|
+| ![Before](examples/images/before/poster-yellow.jpg) | ![After](examples/images/after/poster-neutral.jpg) |
+
+**Preserved**: Price ($3.99), address (123 Main St), product placement, logo, layout  
+**Fixed**: 5600K daylight balance, clean whites, neutral grays, accurate brand blues  
+**Prompt used**: Full prompt from [`prompts/neutral_color_balance.md`](prompts/neutral_color_balance.md)
+
+---
+
+### 2️⃣ 🍔 Food Photography
+
+**Problem**: Golden "appetizing" overlay — brownish greens, yellow whites, artificial warmth
+
+| Before (Warm Filter) | After (Color-Accurate) |
+|:---:|:---:|
+| ![Before](examples/images/before/food-warm.jpg) | ![After](examples/images/after/food-neutral.jpg) |
+
+**Preserved**: Food appeal, composition, plating  
+**Fixed**: Fresh greens, clean whites, natural meat tones, no golden overlay  
+**Prompt used**: Food variant from [`prompts/neutral_color_balance.md`](prompts/neutral_color_balance.md)
+
+---
+
+### 3️⃣ 🎬 Cinematic / Fantasy Art
+
+**Problem**: Heavy orange/teal grading — orange skin tones, teal shadows, sepia haze
+
+| Before (Orange/Teal) | After (Neutral Fantasy) |
+|:---:|:---:|
+| ![Before](examples/images/before/cinematic-orange.jpg) | ![After](examples/images/after/cinematic-neutral.jpg) |
+
+**Preserved**: Composition, characters, mood, detail  
+**Fixed**: Natural skin, neutral shadows, readable text, no orange cast  
+**Prompt used**: Cinematic variant from [`prompts/neutral_color_balance.md`](prompts/neutral_color_balance.md)
+
+---
+
 ## 🚀 Quickstart
 
 ### 📦 Installation by Tool
@@ -133,72 +181,6 @@ yellow tint, orange cast, warm filter, sepia, amber lighting, vintage color grad
 
 > **Midjourney**: Add `--no yellow tint, orange cast, warm filter, sepia, amber lighting, vintage color grading, old painting, golden hour, aged paper, brown overlay, muddy colors, oversaturated orange, excessive warmth, cream whites, brown blacks`  
 > **Stable Diffusion**: Paste into negative prompt box
-
----
-
-## 🖼 Before → After Examples
-
-> **Add your images to `examples/images/before/` and `examples/images/after/`** — the markdown below will render automatically on GitHub.
-
----
-
-### 1️⃣ 🛒 Supermarket Promo Poster
-
-**Problem**: Yellow/orange cast — cream whites, amber shadows, inaccurate brand blues
-
-| Before (Yellow Tint) | After (Neutral) |
-|:---:|:---:|
-| ![Before](examples/images/before/poster-yellow.jpg) | ![After](examples/images/after/poster-neutral.jpg) |
-
-**Preserved**: Price ($3.99), address (123 Main St), product placement, logo, layout  
-**Fixed**: 5600K daylight balance, clean whites, neutral grays, accurate brand blues  
-**Prompt used**: Full prompt from [`prompts/neutral_color_balance.md`](prompts/neutral_color_balance.md)
-
----
-
-### 2️⃣ 🍔 Food Photography
-
-**Problem**: Golden "appetizing" overlay — brownish greens, yellow whites, artificial warmth
-
-| Before (Warm Filter) | After (Color-Accurate) |
-|:---:|:---:|
-| ![Before](examples/images/before/food-warm.jpg) | ![After](examples/images/after/food-neutral.jpg) |
-
-**Preserved**: Food appeal, composition, plating  
-**Fixed**: Fresh greens, clean whites, natural meat tones, no golden overlay  
-**Prompt used**: Food variant from [`prompts/neutral_color_balance.md`](prompts/neutral_color_balance.md)
-
----
-
-### 3️⃣ 🎬 Cinematic / Fantasy Art
-
-**Problem**: Heavy orange/teal grading — orange skin tones, teal shadows, sepia haze
-
-| Before (Orange/Teal) | After (Neutral Fantasy) |
-|:---:|:---:|
-| ![Before](examples/images/before/cinematic-orange.jpg) | ![After](examples/images/after/cinematic-neutral.jpg) |
-
-**Preserved**: Composition, characters, mood, detail  
-**Fixed**: Natural skin, neutral shadows, readable text, no orange cast  
-**Prompt used**: Cinematic variant from [`prompts/neutral_color_balance.md`](prompts/neutral_color_balance.md)
-
----
-
-### 📁 How to Add Your Images
-
-```bash
-# Create directories
-mkdir -p examples/images/before examples/images/after
-
-# Add your 3 before/after pairs:
-# examples/images/before/poster-yellow.jpg   → examples/images/after/poster-neutral.jpg
-# examples/images/before/food-warm.jpg       → examples/images/after/food-neutral.jpg
-# examples/images/before/cinematic-orange.jpg → examples/images/after/cinematic-neutral.jpg
-```
-
-> **Tip**: Keep filenames exactly as above — the markdown references will work automatically.
-
----
 
 ## 🎯 When to Use
 
