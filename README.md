@@ -1,15 +1,32 @@
-# sepia-be-gone
+<div align="center">
 
-> A portable prompt skill to generate AI images without the yellow/orange/sepia filter. Works with opencode, Claude Code, Codex, Cursor, Windsurf, VS Code Copilot, and any image generator.
+# 🎨 Sepia Be Gone
+
+<img src="https://img.shields.io/badge/status-active-brightgreen?style=for-the-badge" alt="Status" />
+<img src="https://img.shields.io/badge/license-MIT-blue?style=for-the-badge" alt="License" />
+<img src="https://img.shields.io/badge/version-1.0.0-purple?style=for-the-badge" alt="Version" />
+<img src="https://img.shields.io/github/stars/BrunosGits/sepia-be-gone?style=for-the-badge" alt="Stars" />
+<img src="https://img.shields.io/github/issues/BrunosGits/sepia-be-gone?style=for-the-badge" alt="Issues" />
+
+<br/><br/>
+
+**A portable prompt skill to banish the yellow/orange/sepia filter from AI-generated images.**  
+Works with **opencode**, **Claude Code**, **Codex**, **Cursor**, **Windsurf**, **VS Code Copilot**, and any image generator.
+
+<br/>
+
+> *"AI doesn't have to look like it was developed in a 1970s darkroom."*
+
+</div>
 
 ---
 
-## The Problem: Why AI Images Look Yellow
+## 🤔 The Problem: Why AI Images Look Yellow
 
 AI image models don't just "learn from old paintings." The yellow/orange cast comes from **token bias** in training data:
 
-| Prompt Keyword | Statistical Association | Result |
-|----------------|------------------------|--------|
+| 🎯 Prompt Keyword | 📊 Statistical Association | 🎨 Result |
+|:---|:---|:---|
 | `cinematic` | Orange/teal grading (Hollywood LUTs) | Heavy amber cast |
 | `golden hour` | Warm sunset lighting | Extreme yellow/orange |
 | `premium`, `luxury` | Warm "golden" commercial photography | Cream whites, brown blacks |
@@ -17,51 +34,81 @@ AI image models don't just "learn from old paintings." The yellow/orange cast co
 | `studio lighting` | Often tungsten (3200K) not daylight | Warm color temperature |
 | `dramatic lighting` | Chiaroscuro with warm key lights | Orange shadows |
 
-**RLHF amplifies this**: Human raters consistently prefer warmer images for "appeal," so models learn warmth = quality.
+**RLHF amplifies this**: Human raters consistently prefer warmer images for "appeal," so models learn **warmth = quality**.
 
 ---
 
-## What This Skill Does
+## ✨ What This Skill Does
 
-**Preserves:** Layout, composition, products, logos, labels, prices, addresses, all visible text  
-**Applies:** Neutral 5600K daylight balance, clean whites, neutral blacks, accurate colors  
-**Removes:** Yellow tint, orange cast, warm filter, sepia, amber, golden hour, vintage grading
+| ✅ **Preserves** | 🎯 **Applies** | 🚫 **Removes** |
+|:---|:---|:---|
+| Layout & composition | Neutral 5600K daylight balance | Yellow tint |
+| Products & packaging | Clean whites (RGB 255,255,255) | Orange cast |
+| Logos & labels | Deep neutral blacks (RGB 0,0,0) | Warm filter |
+| Prices & addresses | Accurate product/brand colors | Sepia tone |
+| **ALL visible text** | Natural contrast, crisp lighting | Amber / golden hour |
+| Design structure & spacing | Modern commercial look | Vintage grading |
 
 ---
 
-## Quickstart
+## 🚀 Quickstart
 
-### opencode
+### 📦 Installation by Tool
+
+<table>
+<tr>
+<td width="50%">
+
+#### 🐙 opencode
 ```bash
 git clone https://github.com/BrunosGits/sepia-be-gone.git ~/.config/opencode/skill/sepia-be-gone
 # Use: /sepia-be-gone
 ```
 
-### Claude Code
+#### 🤖 Claude Code
 ```bash
 git clone https://github.com/BrunosGits/sepia-be-gone.git ~/.claude/skills/sepia-be-gone
 # Use: /sepia-be-gone
 ```
 
-### Codex / Generic Agents
+#### ⚡ Codex / Generic Agents
 ```bash
 git clone https://github.com/BrunosGits/sepia-be-gone.git .github/skills/sepia-be-gone
 # Use: /sepia-be-gone
 ```
 
-### Cursor
-Copy `CURSOR.md` to `~/.cursor/rules/sepia-be-gone.mdc` or project `.cursor/rules/`  
-Use: `@sepia-be-gone` in chat
+</td>
+<td width="50%">
 
-### Windsurf
-Copy `WINDSURF.md` to `~/.codeium/windsurf/skills/sepia-be-gone/`  
-Use: `/sepia-be-gone` in Cascade
+#### 🎯 Cursor
+```bash
+# Copy CURSOR.md to:
+~/.cursor/rules/sepia-be-gone.mdc
+# Or project: .cursor/rules/
+# Use: @sepia-be-gone in chat
+```
 
-### VS Code Copilot
-Add `VSCODE.md` content to `.github/copilot-instructions.md` or settings  
-Use: "Use sepia-be-gone skill" in chat
+#### 🌊 Windsurf
+```bash
+# Copy WINDSURF.md to:
+~/.codeium/windsurf/skills/sepia-be-gone/
+# Use: /sepia-be-gone in Cascade
+```
 
-### Any Image Generator (DALL-E, Midjourney, GPT-4o, Gemini, Firefly, etc.)
+#### 💻 VS Code Copilot
+```bash
+# Add VSCODE.md content to:
+.github/copilot-instructions.md
+# Use: "Use sepia-be-gone skill" in chat
+```
+
+</td>
+</tr>
+</table>
+
+### 🎨 Any Image Generator
+Works with **DALL-E 3**, **Midjourney**, **GPT-4o**, **Gemini**, **Firefly**, **Stable Diffusion**, **Flux**, etc.
+
 ```bash
 cat prompts/neutral_color_balance.md | pbcopy
 # Paste at end of your prompt
@@ -69,72 +116,126 @@ cat prompts/neutral_color_balance.md | pbcopy
 
 ---
 
-## The Prompt (Copy-Paste Ready)
+## 📋 The Prompt (Copy-Paste Ready)
 
-**Full prompt** → `prompts/neutral_color_balance.md`
+### 📄 Full Prompt
+→ [`prompts/neutral_color_balance.md`](prompts/neutral_color_balance.md)
 
-**Short add-on** (append to any prompt):
+### ⚡ Short Add-on (append to any prompt)
 ```
 Color grading: neutral daylight-balanced white balance, accurate colors, clean whites, neutral blacks, no yellow tint, no sepia, no orange cast, no warm filter, no vintage grading, no golden-hour lighting.
 ```
 
-**Negative prompt** (if supported):
+### 🚫 Negative Prompt (if supported)
 ```
 yellow tint, orange cast, warm filter, sepia, amber lighting, vintage color grading, old painting, golden hour, aged paper, brown overlay, muddy colors, oversaturated orange, excessive warmth, cream whites, brown blacks
 ```
 
----
-
-## Before → After Examples
-
-See [`EXAMPLES.md`](EXAMPLES.md) for 3 case studies:
-1. **Supermarket promo poster** — cream whites → pure whites, amber shadows → neutral
-2. **Food photography** — golden overlay → color-accurate greens/meats
-3. **Cinematic/fantasy** — orange/teal grading → neutral daylight
+> **Midjourney**: Add `--no yellow tint, orange cast, warm filter, sepia, amber lighting, vintage color grading, old painting, golden hour, aged paper, brown overlay, muddy colors, oversaturated orange, excessive warmth, cream whites, brown blacks`  
+> **Stable Diffusion**: Paste into negative prompt box
 
 ---
 
-## When to Use
+## 🖼 Before → After Examples
 
-- "Remove the yellow tint"
-- "Make this less warm"  
-- "Fix the AI yellow filter"
-- "Whites look cream/yellow"
-- "Food looks orange"
-- "Poster looks vintage but shouldn't"
+See [`EXAMPLES.md`](EXAMPLES.md) for 3 detailed case studies:
 
----
-
-## Limitations
-
-| Limitation | Workaround |
-|------------|------------|
-| Generative editors distort text | For posters with exact prices/addresses: generate background only, add text in Figma/Canva |
-| Deliberate warm/vintage style | Don't use — this skill forces neutral |
-| Extreme orange casts (sunset) | May need 2-pass editing |
-| Local color casts only | Use generative inpainting for specific regions |
+| # | Scenario | Problem | Fix |
+|:---:|:---|:---|:---|
+| **1** | 🛒 **Supermarket Promo Poster** | Cream whites, amber shadows, wrong brand blues | 5600K daylight, pure whites, accurate blues |
+| **2** | 🍔 **Food Photography** | Golden overlay, brownish greens, yellow whites | Fresh greens, clean whites, natural tones |
+| **3** | 🎬 **Cinematic / Fantasy** | Orange/teal grading, orange skin, sepia haze | Natural skin, neutral shadows, readable text |
 
 ---
 
-## Repository Structure
+## 🎯 When to Use
+
+<details>
+<summary><b>Click to expand trigger phrases</b></summary>
+
+- "Remove the yellow tint" / "Remove yellow filter"
+- "Make this less warm" / "Too warm" / "Fix warm colors"
+- "Neutralize colors" / "Neutral color balance"
+- "Clean whites" / "Whites look cream" / "Whites are yellow"
+- "Remove orange cast" / "Too orange"
+- "Remove sepia" / "Looks vintage" / "Old photo look"
+- "Fix AI yellow filter" / "AI yellow tint"
+- "5600K" / "Daylight balanced" / "Neutral lighting"
+
+</details>
+
+---
+
+## ⚠️ Limitations & Workarounds
+
+| Limitation | Severity | Workaround |
+|:---|:---:|:---|
+| **Generative editors distort text** | 🔴 High | For posters with exact prices/addresses: generate background only → add text in Figma/Canva/Photoshop |
+| **Deliberate warm/vintage style** | 🟡 Medium | Don't use — this skill forces neutral |
+| **Extreme orange casts (sunset)** | 🟡 Medium | May need 2-pass editing |
+| **Local color casts only** | 🟢 Low | Use generative inpainting for specific regions |
+
+---
+
+## 📁 Repository Structure
 
 ```
 sepia-be-gone/
-├── README.md                          # This file
-├── SKILL.md                           # opencode skill (primary)
-├── AGENTS.md                          # Codex/opencode adapter
-├── CLAUDE.md                          # Claude Code adapter
-├── CURSOR.md                          # Cursor IDE rule
-├── WINDSURF.md                        # Windsurf Cascade skill
-├── VSCODE.md                          # VS Code Copilot instructions
-├── LICENSE                            # MIT
-├── prompts/
-│   └── neutral_color_balance.md       # The reusable prompt
-└── EXAMPLES.md                        # Before/after gallery
+├── 📄 README.md                          # This file
+├── ⚙️  SKILL.md                           # opencode skill (primary)
+├── 🤖 AGENTS.md                          # Codex/opencode adapter
+├── 🤖 CLAUDE.md                          # Claude Code adapter
+├── 🎯 CURSOR.md                          # Cursor IDE rule (.mdc)
+├── 🌊 WINDSURF.md                        # Windsurf Cascade skill
+├── 💻 VSCODE.md                          # VS Code Copilot instructions
+├── ⚖️  LICENSE                            # MIT
+├── 📁 prompts/
+│   └── 🎨 neutral_color_balance.md       # The reusable prompt
+└── 📁 EXAMPLES.md                        # Before/after gallery
 ```
 
 ---
 
-## License
+## 🛠 How It Works
 
-MIT — see [`LICENSE`](LICENSE)
+### 🎭 Generative Prompt Strategy
+The prompt uses **three mechanisms**:
+
+1. **Explicit preservation directives** — "Preserve: layout, text, logos, prices, addresses"
+2. **Positive color specification** — "5600K daylight-balanced", "clean whites", "neutral blacks"
+3. **Negative constraint list** — 15+ forbidden terms (yellow tint, sepia, golden hour, vintage, etc.)
+
+This exploits how diffusion models attend to both positive and negative token guidance.
+
+### 🎯 Target Color Temperature
+| Lighting Type | Kelvin | Use Case |
+|:---|:---:|:---|
+| Tungsten (warm) | 3200K | ❌ Avoid |
+| Golden Hour | 3500-4500K | ❌ Avoid |
+| **Daylight Neutral** | **5500-5600K** | ✅ **Target** |
+| Overcast Daylight | 6500K | ✅ Acceptable |
+| Cool Studio | 7000K+ | ⚠️ May overcorrect |
+
+---
+
+## 🤝 Contributing
+
+Found a better prompt variant? Discovered a new tool integration?  
+PRs welcome! Please read the skill files before modifying.
+
+---
+
+## 📜 License
+
+**MIT License** — Free for personal and commercial use.  
+See [`LICENSE`](LICENSE) for full text.
+
+---
+
+<div align="center">
+
+### 🌟 Star this repo if it saved your images from the yellow filter!
+
+**Made with ☕ by [BrunosGits](https://github.com/BrunosGits)**
+
+</div>
