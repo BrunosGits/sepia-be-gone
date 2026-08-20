@@ -5,6 +5,7 @@
 <img src="https://img.shields.io/badge/status-active-brightgreen?style=for-the-badge" alt="Status" />
 <img src="https://img.shields.io/badge/license-MIT-blue?style=for-the-badge" alt="License" />
 <img src="https://img.shields.io/badge/version-1.0.0-purple?style=for-the-badge" alt="Version" />
+<img src="https://img.shields.io/badge/language-Markdown-000000?style=for-the-badge" alt="Language" />
 <img src="https://img.shields.io/github/stars/BrunosGits/sepia-be-gone?style=for-the-badge" alt="Stars" />
 <img src="https://img.shields.io/github/issues/BrunosGits/sepia-be-gone?style=for-the-badge" alt="Issues" />
 
