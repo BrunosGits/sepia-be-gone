@@ -63,7 +63,7 @@ AI image models don't just "learn from old paintings." The yellow/orange cast co
 
 | Before (Yellow Tint) | After (Neutral) |
 |:---:|:---:|
-| ![Before](examples/images/before/poster-yellow.jpg) | ![After](examples/images/after/poster-neutral.jpg) |
+| <img src="examples/images/before/poster-yellow.jpg" width="500" alt="Before: Yellow tinted poster"> | <img src="examples/images/after/poster-neutral.jpg" width="500" alt="After: Neutral poster"> |
 
 **Preserved**: Price ($3.99), address (123 Main St), product placement, logo, layout  
 **Fixed**: 5600K daylight balance, clean whites, neutral grays, accurate brand blues  
@@ -77,7 +77,7 @@ AI image models don't just "learn from old paintings." The yellow/orange cast co
 
 | Before (Warm Filter) | After (Color-Accurate) |
 |:---:|:---:|
-| ![Before](examples/images/before/food-warm.jpg) | ![After](examples/images/after/food-neutral.jpg) |
+| <img src="examples/images/before/food-warm.jpg" width="350" alt="Before: Warm food photo"> | <img src="examples/images/after/food-neutral.jpg" width="350" alt="After: Neutral food photo"> |
 
 **Preserved**: Food appeal, composition, plating  
 **Fixed**: Fresh greens, clean whites, natural meat tones, no golden overlay  
@@ -91,7 +91,7 @@ AI image models don't just "learn from old paintings." The yellow/orange cast co
 
 | Before (Orange/Teal) | After (Neutral Fantasy) |
 |:---:|:---:|
-| ![Before](examples/images/before/cinematic-orange.jpg) | ![After](examples/images/after/cinematic-neutral.jpg) |
+| <img src="examples/images/before/cinematic-orange.jpg" width="350" alt="Before: Orange/teal cinematic"> | <img src="examples/images/after/cinematic-neutral.jpg" width="350" alt="After: Neutral cinematic"> |
 
 **Preserved**: Composition, characters, mood, detail  
 **Fixed**: Natural skin, neutral shadows, readable text, no orange cast  
